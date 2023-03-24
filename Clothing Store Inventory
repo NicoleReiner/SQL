@@ -1,0 +1,29 @@
+--Creat a clothing store database
+
+CREATE TABLE inventory (id INTEGER primary key, name TEXT, quantity INTEGER, 
+retailprice INTEGER, wholesale INTEGER, sku INTEGER);
+
+INSERT INTO inventory VALUES
+(1,"tshirts", 15, 15.00, 8, 1234);
+INSERT INTO inventory VALUES (2, "white socks", 10, 2.00,.50, 4563);
+INSERT INTO inventory VALUES (3, "pants", 20, 20.00,10, 7893);
+INSERT INTO inventory VALUES (4, "sweatshirt", 7, 25.00,13, 7894);
+INSERT INTO inventory VALUES (5, "long sleeve shirt", 17, 18.00,8, 7839);
+INSERT INTO inventory VALUES (6, "hoodie" , 18, 30.00, 15,8912);
+INSERT INTO inventory VALUES (7, "black socks", 10, 2.00,.50, 4532);
+INSERT INTO inventory VALUES (8, "gray socks", 10, 2.00, .50,8903);
+INSERT INTO inventory VALUES (9,"blue socks", 10, 2.00, .50,7128);
+INSERT INTO inventory VALUES (10, "tennis shoes", 25, 50.00,35., 3256);
+INSERT INTO inventory VALUES (11, "dress shoes", 15, 65.00,30., 3289);
+INSERT INTO inventory VALUES (12, "slippers", 12, 10.00, 3,3278);
+INSERT INTO inventory VALUES (13, "denim shorts", 20, 25.00,12, 3457);
+INSERT INTO inventory VALUES (14, "denim pants", 22, 35.00,18, 9999);
+INSERT INTO inventory VALUES (15, "hats", 9, 25.00,12, 5555);
+
+--Display store inventory ordered by price
+SELECT * FROM inventory;
+SELECT * FROM inventory WHERE retailprice  ORDER BY retailprice asC;
+
+--Display store inventory ordered by quantity
+SELECT * FROM inventory;
+SELECT * FROM inventory WHERE quantity ORDER BY quantity asC;
